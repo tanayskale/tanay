@@ -1,0 +1,233 @@
+package TestCases;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import WebElement.OrangeHRMWebElement;
+import WebElement.saucedemoLoginpage;
+
+public class OrangeHRMTestCase {
+	
+	
+	
+	 void OpenWebPage( OrangeHRMWebElement Web,WebDriver driver)
+	   {
+		   String url="https://opensource-demo.orangehrmlive.com/index.php/auth/validateCredentials";
+		   driver.navigate().to(url);
+		   driver.manage().window().maximize();
+	
+		}
+	   
+	   
+	   void TestCaseTwo(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		 
+		   Web.UserName().sendKeys("Admin");
+		   Web.pass().sendKeys("admin123");
+		   Web.Login().click();
+		   Thread.sleep(3000);
+		   driver.navigate().back();
+		   driver.navigate().refresh();
+		   Thread.sleep(3000);
+		   
+		 }
+	   
+	   void TestCaseThree(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		 
+		   Web.UserName().sendKeys("Admina");
+		   Web.pass().sendKeys("admin1234");
+		   Web.Login().click();
+		   Thread.sleep(3000);
+		   driver.navigate().back();
+		   driver.navigate().refresh();
+		   Thread.sleep(3000);
+		   
+		 }
+	   
+	   void TestCaseFour(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		 
+		   Web.UserName().sendKeys("Admina");
+		   Web.pass().sendKeys("admin1234");
+		   Web.Login().click();
+		   Thread.sleep(3000);
+		   driver.navigate().back();
+		   driver.navigate().refresh();
+		   Thread.sleep(3000);
+		   
+		 }
+	   
+	   void TestCaseFive(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		 
+		   Web.UserName().sendKeys("");
+		   Web.pass().sendKeys("admin123");
+		   Web.Login().click();
+		   Thread.sleep(3000);
+		  
+		   driver.navigate().refresh();
+		   Thread.sleep(3000);
+		   
+		 }
+	   
+	   void TestCaseSix(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		 
+		   Web.UserName().sendKeys("Admin");
+		   Web.pass().sendKeys("");
+		   Web.Login().click();
+		   Thread.sleep(3000);
+		  
+		   driver.navigate().refresh();
+		   
+		   Thread.sleep(3000);
+		   
+		 }
+	   
+	   void TestCaseSeven(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		 
+		   Web.UserName().sendKeys("");
+		   Web.pass().sendKeys("");
+		   Web.Login().click();
+		   Thread.sleep(3000);
+		  
+		   driver.navigate().refresh();
+		   Thread.sleep(3000);
+		   
+		 }
+	   
+	   void TestCaseEight(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		   try
+		   {
+			   Web.LinkedIn().click();
+				  Thread.sleep(3000);
+				  driver.navigate().back();
+				  
+				  Thread.sleep(3000);
+				  driver.close();
+		   }
+		   catch(Exception e)
+		   {
+			   
+		   }
+		  
+		  
+	 }
+	   void TestCaseNine(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		   try
+		   {
+		   
+		  Web.LinkedIn().click();
+		  Thread.sleep(3000);
+		  driver.navigate().back();
+		  
+		  Thread.sleep(3000);
+		  driver.close();
+		   }
+		   catch(Exception e)
+		   {
+			   
+		   }
+		   
+		  
+	 }
+	   
+	   void TestCaseTen(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		   try
+		   {
+			   Web.FaceBook().click();
+				  Thread.sleep(3000);
+				  driver.navigate().back();
+				  
+				  Thread.sleep(3000);
+				  driver.close();
+		   }
+		   catch(Exception e)
+		   {
+			   
+		   }
+		  
+		  
+	 }
+	   
+	   void TestCase11(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		   try
+		   {
+			   Web.Twitter().click();
+				  Thread.sleep(3000);
+				  driver.navigate().back();
+				  
+				  Thread.sleep(3000);
+				  driver.close();
+		   }
+		   catch(Exception e)
+		   {
+			   
+		   }
+		   
+		 
+		  
+	 }
+	   
+	   void TestCase12(OrangeHRMWebElement Web, WebDriver driver) throws InterruptedException
+	   {
+		   try
+		   {
+			   Web.YouTube().click();
+				  Thread.sleep(3000);
+				  driver.navigate().back();
+				  
+				  Thread.sleep(3000);
+				  driver.close();
+		   }
+		   catch(Exception e)
+		   {
+			   
+		   }
+		  
+		  
+	 }
+	
+
+	public static void main(String[] args) throws InterruptedException {
+	System.setProperty("webdriver.chrome.driver","/Users/hp/Downloads/chromedriver_win32/chromedriver.exe");
+    WebDriver driver=new ChromeDriver();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    
+    OrangeHRMWebElement Web=new  OrangeHRMWebElement(driver);
+    OrangeHRMTestCase obj=new OrangeHRMTestCase();
+    obj.OpenWebPage(Web, driver);
+   // obj.TestCaseTwo(Web, driver);
+  //  obj.TestCaseThree(Web, driver);
+  //  obj.TestCaseFour(Web, driver);
+  //  obj.TestCaseFive(Web, driver);
+  //  obj.TestCaseSix(Web, driver);
+   // obj.TestCaseSeven(Web, driver);
+    obj.TestCaseEight(Web, driver);
+    obj.TestCaseNine(Web, driver);
+    obj.TestCaseTen(Web, driver);
+    obj.TestCase11(Web, driver);
+    obj.TestCase12(Web, driver);
+    
+    
+	
+	
+	
+		
+	
+
+	
+	
+	
+		
+	}
+
+}
